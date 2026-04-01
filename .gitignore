@@ -1,0 +1,12 @@
+# Local snapshot backups — not needed in the repository
+_snapshots/
+
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
