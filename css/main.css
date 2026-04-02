@@ -671,6 +671,123 @@ em { font-style: italic; }
   color: var(--text-muted);
 }
 
+/* --- Project Cards --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.project-card {
+  padding: var(--space-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.project-card:hover {
+  border-left-color: var(--accent-hover);
+  box-shadow: 0 4px 20px rgba(29,78,122,0.09);
+  transform: translateY(-2px);
+}
+
+.project-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.project-status {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2a7a4b;
+  background: #e6f4ed;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin-bottom: 0;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  flex-grow: 1;
+}
+
+.project-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0.25rem 0;
+}
+
+.project-features li {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.project-features li::before {
+  content: "·";
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+  transition: color var(--transition);
+}
+
+.project-link:hover { color: var(--accent-hover); }
+
+.project-placeholder {
+  padding: var(--space-lg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  min-height: 200px;
+}
+
 /* --- Innovation Items --- */
 .innovation-list {
   display: flex;
@@ -1060,6 +1177,8 @@ em { font-style: italic; }
     grid-column: span 1;
     grid-template-columns: 1fr;
   }
+
+  .project-grid { grid-template-columns: 1fr; }
 
   .innovation-item {
     grid-template-columns: 80px 1fr;
